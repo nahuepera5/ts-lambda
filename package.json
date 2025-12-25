@@ -1,0 +1,19 @@
+{
+  "name": "ts-lambda",
+  "version": "1.0.0",
+  "description": "Functional types and patterns for TypeScript inspired by Haskell and pure functional programming",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["typescript", "functional", "haskell", "maybe", "either", "monad", "fp"],
+  "author": "nahuepera5",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "files": ["dist", "src"]
+}

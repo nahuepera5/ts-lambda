@@ -1,0 +1,14 @@
+import type { Either } from "../either/Either";
+import { Maybe } from "../maybe/Maybe";
+type Validator<T> = (input: unknown) => Either<Error, T>;
+declare const stringValidator: Validator<string>;
+declare const numberValidator: Validator<number>;
+declare const booleanValidator: Validator<boolean>;
+declare const bigintValidator: Validator<bigint>;
+declare const symbolValidator: Validator<symbol>;
+declare const nullValidator: Validator<null>;
+declare const undefinedValidator: Validator<undefined>;
+declare const optionalValidator: <T>(validator: Validator<T>) => Validator<Maybe<T>>;
+declare const unionValidator: <T>(...validators: Validator<T>[]) => Validator<T>;
+declare const objectValidator: <T>(schema: Record<string, Validator<T>>) => (input: any) => any;
+export { stringValidator, numberValidator, booleanValidator, bigintValidator, symbolValidator, nullValidator, undefinedValidator, optionalValidator, unionValidator, objectValidator };
