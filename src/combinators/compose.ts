@@ -81,5 +81,5 @@ export function compose<A, B, C, D, E, F, G, H, I, J, K>(
 
 // generic
 export function compose(...fns: Array<Function>): any {
-    return (x: any) => [...fns].reverse().reduce((acc, fn) => fn(acc), x);
+    return (x: any) => [...fns].reduceRight((acc, fn) => fn(acc), x);
 }
